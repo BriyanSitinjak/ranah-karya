@@ -1,11 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-primary: #f15a24;
+  --brand-primary-dark: #d94e1f;
+  --brand-cream: #fff9e1;
+  --brand-mint: #d9ead3;
+  --brand-gray: #d1d3d4;
+  --brand-gray-dark: #6b7280;
+  --brand-dark: #1a1a1a;
+  --brand-white: #ffffff;
+  --background: var(--brand-cream);
+  --foreground: var(--brand-dark);
 }
 
 @theme inline {
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-dark: var(--brand-primary-dark);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-mint: var(--brand-mint);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-gray-dark: var(--brand-gray-dark);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-white: var(--brand-white);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
@@ -45,8 +61,21 @@ button {
   background: none;
 }
 
-/* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #667eea;
+  outline: 2px solid var(--brand-primary);
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
