@@ -30,3 +30,9 @@ export interface CtaLink {
   label: string;
   href: string;
 }
+
+export interface Client {
+  id: string;
+  name: string;
+  logo: string;
+}

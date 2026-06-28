@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import { ASSETS } from "@/config/assets";
 import { PAGE_TITLE, SEO_KEYWORDS } from "@/config/metadata";
 import { SITE_CONFIG } from "@/config/site";
 
@@ -22,10 +21,6 @@ export const metadata: Metadata = {
   keywords: [...SEO_KEYWORDS],
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
-  icons: {
-    icon: ASSETS.logo,
-    apple: ASSETS.logo,
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
